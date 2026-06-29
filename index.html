@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1614,8 +1614,9 @@ body.light {
         <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
         <p class="section-subtitle">Karya-karya yang udah gw buat</p>
     </div>
+
     <div class="progress-banner">
-        <div class="progress-banner-icon"><i class="fas fa-code-branch"></i></div>
+        <div class="progress-banner-icon" style="font-size:32px;animation:logoPulse 3s ease-in-out infinite">🚀</div>
         <div class="progress-banner-text">
             <h3>Masih Belajar Tapi Semangat!</h3>
             <p>Masih dalam tahap pembelajaran, tapi udah bisa bikin project keren kayak di bawah ini!</p>
@@ -1625,45 +1626,111 @@ body.light {
             <div class="progress-track"><div class="progress-fill" data-width="82"></div></div>
         </div>
     </div>
-    <div class="projects-grid">
-        <div class="project-card" data-tilt>
+
+    <div class="projects-grid" style="perspective:1200px;">
+
+        <!-- CARD 1 -->
+        <div class="project-card" style="
+            --c1:#8b5cf6;--c2:#a78bfa;
+            transform-style:preserve-3d;
+            transition:transform .5s cubic-bezier(.34,1.2,.64,1),box-shadow .4s ease;
+        " id="pcard1">
+            <div style="height:3px;background:linear-gradient(90deg,#8b5cf6,#a78bfa);position:relative;">
+                <div style="position:absolute;inset:0;background:inherit;filter:blur(8px);opacity:.8;"></div>
+            </div>
             <span class="card-num">01</span>
-            <div class="project-banner" onclick="window.open('https://ramaxyz22.github.io/model-ui/','_blank')">
-                <img src="ui1.png" alt="RAMAUI Buttons" class="project-image" onerror="this.style.display='none'">
-                <div class="banner-icon"><i class="fas fa-hand-pointer"></i></div>
+            <div class="project-banner" onclick="window.open('https://ramaxyz22.github.io/model-ui/','_blank')" style="cursor:pointer;">
+                <div class="banner-icon" style="
+                    font-size:52px;color:rgba(139,92,246,.5);
+                    animation:windowFloat 4s ease-in-out infinite;
+                    display:flex;align-items:center;justify-content:center;
+                    position:absolute;inset:0;
+                ">🖱️</div>
+                <!-- corner sparks -->
+                <div style="position:absolute;top:8px;left:8px;width:12px;height:12px;border-top:2px solid rgba(139,92,246,.7);border-left:2px solid rgba(139,92,246,.7);border-radius:4px 0 0 0;transition:.3s;"></div>
+                <div style="position:absolute;top:8px;right:8px;width:12px;height:12px;border-top:2px solid rgba(139,92,246,.7);border-right:2px solid rgba(139,92,246,.7);border-radius:0 4px 0 0;transition:.3s;"></div>
+                <div style="position:absolute;bottom:8px;left:8px;width:12px;height:12px;border-bottom:2px solid rgba(139,92,246,.7);border-left:2px solid rgba(139,92,246,.7);border-radius:0 0 0 4px;transition:.3s;"></div>
+                <div style="position:absolute;bottom:8px;right:8px;width:12px;height:12px;border-bottom:2px solid rgba(139,92,246,.7);border-right:2px solid rgba(139,92,246,.7);border-radius:0 0 4px 0;transition:.3s;"></div>
                 <div class="project-overlay"><i class="fas fa-external-link-alt"></i><span>Visit Site</span></div>
             </div>
             <div class="project-info">
+                <div style="display:inline-flex;align-items:center;gap:6px;padding:3px 12px;border-radius:50px;font-size:10px;font-weight:700;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);color:#c4b5fd;margin-bottom:10px;">
+                    <span style="width:6px;height:6px;border-radius:50%;background:#c4b5fd;display:inline-block;animation:dotBlink 1.5s ease-in-out infinite;"></span> Live
+                </div>
                 <h3 class="project-title">RAMAUI Buttons</h3>
                 <p class="project-description">20 button unik dengan animasi smooth — ripple, pop, spin, squish & more!</p>
                 <div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JS</span></div>
                 <div class="project-links"><a href="https://ramaxyz22.github.io/model-ui/" target="_blank" class="project-link live"><i class="fas fa-globe"></i> Demo</a></div>
+                <div style="display:flex;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);">
+                    <div style="flex:1;text-align:center;"><div style="font-family:Orbitron,sans-serif;font-size:16px;font-weight:900;color:#a78bfa;">20</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Buttons</div></div>
+                    <div style="flex:1;text-align:center;"><div style="font-family:Orbitron,sans-serif;font-size:16px;font-weight:900;color:#a78bfa;">3</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Tech</div></div>
+                    <div style="flex:1;text-align:center;"><div style="font-size:16px;">✅</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Live</div></div>
+                </div>
             </div>
         </div>
-        <div class="project-card coming-soon-card" data-tilt>
+
+        <!-- CARD 2 -->
+        <div class="project-card" id="pcard2">
+            <div style="height:3px;background:linear-gradient(90deg,#06d6a0,#00f5d4);position:relative;">
+                <div style="position:absolute;inset:0;background:inherit;filter:blur(8px);opacity:.8;"></div>
+            </div>
             <span class="card-num">02</span>
-            <div class="project-banner">
-                <div class="banner-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="project-banner" onclick="window.open('http://absensiqr.xo.je/dashboard.php','_blank')" style="cursor:pointer;background:linear-gradient(135deg,#001a12,#004d38,#00291f);">
+                <div class="banner-icon" style="font-size:52px;color:rgba(6,214,160,.5);animation:windowFloat 4s ease-in-out infinite .5s;">📱</div>
+                <div class="project-overlay" style="background:rgba(0,120,80,.85);"><i class="fas fa-external-link-alt"></i><span>Try It</span></div>
             </div>
             <div class="project-info">
-                <h3 class="project-title">Absensi Qr code Mahasiswa</h3>
-                <p class="project-description">Aplikasi untuk absensi mahasiswa menggunakan kode QR.</p>
-                <div class="project-tech"><span class="tech-tag">PHP</span><span class="tech-tag">Qr Code</span><span class="tech-tag">Database</span></div>
-                <div class="project-links"><a href="http://absensiqr.xo.je/dashboard.php" target="_blank" class="project-link live"><i class="fas fa-globe"></i> Cobain</a></div>
+                <div style="display:inline-flex;align-items:center;gap:6px;padding:3px 12px;border-radius:50px;font-size:10px;font-weight:700;background:rgba(6,214,160,.1);border:1px solid rgba(6,214,160,.3);color:#6ee7b7;margin-bottom:10px;">
+                    <span style="width:6px;height:6px;border-radius:50%;background:#6ee7b7;display:inline-block;animation:dotBlink 1.5s ease-in-out infinite;"></span> Live
+                </div>
+                <h3 class="project-title">Absensi QR Code Mahasiswa</h3>
+                <p class="project-description">Aplikasi absensi mahasiswa menggunakan kode QR — scan & tercatat otomatis!</p>
+                <div class="project-tech">
+                    <span class="tech-tag" style="background:rgba(6,214,160,.1);border-color:rgba(6,214,160,.25);color:#6ee7b7;">PHP</span>
+                    <span class="tech-tag" style="background:rgba(6,214,160,.1);border-color:rgba(6,214,160,.25);color:#6ee7b7;">QR Code</span>
+                    <span class="tech-tag" style="background:rgba(6,214,160,.1);border-color:rgba(6,214,160,.25);color:#6ee7b7;">Database</span>
+                </div>
+                <div class="project-links"><a href="http://absensiqr.xo.je/dashboard.php" target="_blank" class="project-link live" style="background:linear-gradient(135deg,#06d6a0,#00b894);box-shadow:0 3px 12px rgba(6,214,160,.35);"><i class="fas fa-globe"></i> Cobain</a></div>
+                <div style="display:flex;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);">
+                    <div style="flex:1;text-align:center;"><div style="font-family:Orbitron,sans-serif;font-size:14px;font-weight:900;color:#06d6a0;">PHP</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Backend</div></div>
+                    <div style="flex:1;text-align:center;"><div style="font-family:Orbitron,sans-serif;font-size:16px;font-weight:900;color:#06d6a0;">QR</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Tech</div></div>
+                    <div style="flex:1;text-align:center;"><div style="font-size:16px;">✅</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Live</div></div>
+                </div>
             </div>
         </div>
-        <div class="project-card coming-soon-card" data-tilt>
+
+        <!-- CARD 3 -->
+        <div class="project-card coming-soon-card" id="pcard3">
+            <div style="height:3px;background:linear-gradient(90deg,#f72585,#b5179e);position:relative;">
+                <div style="position:absolute;inset:0;background:inherit;filter:blur(8px);opacity:.8;"></div>
+            </div>
             <span class="card-num">03</span>
-            <div class="project-banner">
-                <div class="banner-icon"><i class="fas fa-brain"></i></div>
+            <div class="project-banner" style="background:linear-gradient(135deg,#1a0008,#4d0020,#29000e);">
+                <div class="banner-icon" style="font-size:52px;color:rgba(247,37,133,.5);animation:windowFloat 4s ease-in-out infinite 1s;">🧠</div>
             </div>
             <div class="project-info">
+                <div style="display:inline-flex;align-items:center;gap:6px;padding:3px 12px;border-radius:50px;font-size:10px;font-weight:700;background:rgba(247,37,133,.1);border:1px solid rgba(247,37,133,.3);color:#f9a8d4;margin-bottom:10px;">
+                    <span style="width:6px;height:6px;border-radius:50%;background:#f9a8d4;display:inline-block;animation:dotBlink 1.5s ease-in-out infinite;"></span> In Progress
+                </div>
                 <h3 class="project-title">AI Tools App</h3>
                 <p class="project-description">Aplikasi web berbasis AI untuk membantu produktivitas. Segera hadir!</p>
-                <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">AI</span></div>
-                <div class="coming-dots"><span></span><span></span><span></span></div>
+                <div class="project-tech">
+                    <span class="tech-tag" style="background:rgba(247,37,133,.1);border-color:rgba(247,37,133,.25);color:#f9a8d4;">React</span>
+                    <span class="tech-tag" style="background:rgba(247,37,133,.1);border-color:rgba(247,37,133,.25);color:#f9a8d4;">Node.js</span>
+                    <span class="tech-tag" style="background:rgba(247,37,133,.1);border-color:rgba(247,37,133,.25);color:#f9a8d4;">AI</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;margin-top:4px;">
+                    <div class="coming-dots"><span></span><span></span><span></span></div>
+                    <span style="font-size:11px;color:rgba(240,230,255,.35);">Coming Soon</span>
+                </div>
+                <div style="display:flex;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);">
+                    <div style="flex:1;text-align:center;"><div style="font-size:14px;font-weight:900;color:#f9a8d4;">AI</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Powered</div></div>
+                    <div style="flex:1;text-align:center;"><div style="font-family:Orbitron,sans-serif;font-size:16px;font-weight:900;color:#f9a8d4;">3</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Tech</div></div>
+                    <div style="flex:1;text-align:center;"><div style="font-size:16px;">🔥</div><div style="font-size:9px;color:rgba(240,230,255,.3);letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Soon</div></div>
+                </div>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -2077,26 +2144,42 @@ window.updateCharCount = function(el){
 })();
 
 function submitContact(){
-    const name=document.getElementById('contactName')?.value.trim();
-    const email=document.getElementById('contactEmail')?.value.trim();
-    const msg=document.getElementById('contactMessage')?.value.trim();
-    if(!name||!email||!msg){
-        const wrap=document.querySelector('.contact-form-wrap');
-        if(wrap){wrap.style.animation='none';wrap.offsetHeight;wrap.style.animation='shake 0.4s ease';}
+    const name    = document.getElementById('contactName')?.value.trim();
+    const email   = document.getElementById('contactEmail')?.value.trim();
+    const msg     = document.getElementById('contactMessage')?.value.trim();
+
+    if(!name || !email || !msg){
+        const wrap = document.querySelector('.contact-form-wrap');
+        if(wrap){ wrap.style.animation='none'; wrap.offsetHeight; wrap.style.animation='shake 0.4s ease'; }
         return;
     }
-    const btn=document.querySelector('.submit-btn');
-    if(btn){btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';btn.disabled=true;}
-    setTimeout(()=>{
-        const success=document.getElementById('formSuccess');
-        if(success)success.style.display='flex';
-        if(btn){btn.innerHTML='<i class="fas fa-check"></i> Sent! 🚀';btn.style.background='linear-gradient(135deg,#06d6a0,#00b894)';}
-        document.getElementById('contactName').value='';
-        document.getElementById('contactEmail').value='';
-        document.getElementById('contactMessage').value='';
-        const counter=document.getElementById('charCount');
-        if(counter)counter.textContent='0 / 500';
-    },1200);
+
+    const btn = document.querySelector('.submit-btn');
+    if(btn){ btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...'; btn.disabled=true; }
+fetch('https://formspree.io/f/xlgyleol', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, email, message: msg })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.ok){
+            const success = document.getElementById('formSuccess');
+            if(success) success.style.display = 'flex';
+            if(btn){ btn.innerHTML='<i class="fas fa-check"></i> Sent! 🚀'; btn.style.background='linear-gradient(135deg,#06d6a0,#00b894)'; }
+            document.getElementById('contactName').value    = '';
+            document.getElementById('contactEmail').value   = '';
+            document.getElementById('contactMessage').value = '';
+            const counter = document.getElementById('charCount');
+            if(counter) counter.textContent = '0 / 500';
+        } else {
+            throw new Error('Gagal kirim');
+        }
+    })
+    .catch(() => {
+        if(btn){ btn.innerHTML='<i class="fas fa-exclamation-triangle"></i> Gagal, coba lagi'; btn.disabled=false; btn.style.background='linear-gradient(135deg,#f72585,#b5179e)'; }
+        setTimeout(()=>{ if(btn){ btn.innerHTML='<i class="fas fa-paper-plane"></i> <span>Send Message</span>'; btn.disabled=false; btn.style.background=''; } }, 3000);
+    });
 }
 
 /* SMOOTH SCROLL */
@@ -2576,6 +2659,19 @@ s.textContent=`
 document.head.appendChild(s);
 
 updateActiveLink();
+/* 3D TILT PROJECT CARDS */
+['pcard1','pcard2','pcard3'].forEach(id=>{
+    const card=document.getElementById(id);if(!card)return;
+    card.addEventListener('mousemove',e=>{
+        if(window.innerWidth<768)return;
+        const r=card.getBoundingClientRect();
+        const dx=(e.clientX-r.left-r.width/2)/(r.width/2);
+        const dy=(e.clientY-r.top-r.height/2)/(r.height/2);
+        card.style.transform=`perspective(1000px) rotateY(${dx*12}deg) rotateX(${-dy*10}deg) translateY(-12px) scale(1.03)`;
+        card.style.boxShadow=`${dx*-20}px ${dy*-10}px 60px rgba(0,0,0,.5)`;
+    });
+    card.addEventListener('mouseleave',()=>{card.style.transform='';card.style.boxShadow='';});
+});
 </script>
 </body>
 </html>
